@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Installed App
-    # 'core.apps.CoreConfig'
+    'pages.apps.PagesConfig'
 ]
 
 
