@@ -13,9 +13,19 @@
           <li {% if '' == request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}> 
             <a class="nav-link" href="{% url 'pages:home' %}">Home</a>
           </li>
-          <li {% if 'signup/' == request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}> 
+          {% if user.is_authenticated %}
+          <li class="nav-item mr-3"> 
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item mr-3"> 
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item mr-3"> 
             <a class="nav-link" href="{% url 'pages:signup' %}">Signup</a>
           </li>
+          {% endif %}
+          
         </ul>
 
         <ul class="navbar-nav ml-auto">

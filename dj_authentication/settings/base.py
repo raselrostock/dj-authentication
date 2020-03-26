@@ -91,3 +91,10 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 ################################
 
 WSGI_APPLICATION = 'dj_authentication.wsgi.application'
+
+################################
+##  REDIRECT CONFIGURATION    ##
+################################
+
+LOGIN_REDIRECT_URL = 'pages:home'
+LOGOUT_REDIRECT_URL = 'pages:home'
