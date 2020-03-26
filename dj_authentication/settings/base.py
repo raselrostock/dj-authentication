@@ -98,3 +98,5 @@ WSGI_APPLICATION = 'dj_authentication.wsgi.application'
 
 LOGIN_REDIRECT_URL = 'pages:home'
 LOGOUT_REDIRECT_URL = 'pages:home'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
